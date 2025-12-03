@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>راهنمای ابزار سئو هوشمند | SEO Clustering Tool</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --bg: #f8fafc;
+            --text: #334155;
+            --code-bg: #1e293b;
+            --code-text: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--secondary);
+            text-align: center;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .code-block {
+            background: var(--code-bg);
+            color: var(--code-text);
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+            direction: ltr;
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8em;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .alert {
+            background: #fff1f2;
+            border-right: 4px solid #e11d48;
+            padding: 15px;
+            margin: 20px 0;
+            color: #9f1239;
+            border-radius: 4px;
+        }
+        
+        .info-box {
+            background: #eff6ff;
+            border-right: 4px solid #3b82f6;
+            padding: 15px;
+            margin: 15px 0;
+            color: #1e40af;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+
+        .success {
+            background: #f0fdf4;
+            border-right: 4px solid #16a34a;
+            padding: 15px;
+            margin: 20px 0;
+            color: #166534;
+            border-radius: 4px;
+        }
+
+        ul {
+            padding-right: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.95em;
+            color: #64748b;
+            background: #f8fafc;
+            border-radius: 0 0 16px 16px;
+            margin-bottom: -40px;
+            padding-bottom: 30px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 50px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            color: var(--text);
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            text-decoration: none;
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🚀 راهنمای ابزار هوشمند خوشه‌بندی سئو</h1>
+    <p class="subtitle">تبدیل لیست کلمات کلیدی به استراتژی محتوا با هوش مصنوعی (Gemini & GPT)</p>
+
+    <div class="success">
+        <strong>👋 سلام همکار عزیز!</strong><br>
+        تبریک می‌گم. شما ابزاری رو در اختیار دارید که ساعت‌ها کار دستی در اکسل رو به چند دقیقه تبدیل می‌کنه. این ابزار با استفاده از الگوریتم BERT و هوش مصنوعی گوگل (یا OpenAI)، کلمات شما رو تحلیل و خوشه‌بندی می‌کنه.
+    </div>
+
+    <h2><span class="step-number">1</span> پیش‌نیازها (نصب پایتون)</h2>
+    <p>اگر پایتون روی سیستم شما نصب نیست:</p>
+    <ol>
+        <li>به سایت <a href="https://www.python.org/downloads/" target="_blank">python.org</a> برید و آخرین نسخه رو دانلود کنید.</li>
+        <li><strong>نکته حیاتی:</strong> موقع نصب، حتماً تیک گزینه <code>Add Python to PATH</code> رو بزنید.</li>
+    </ol>
+
+    <h2><span class="step-number">2</span> نصب کتابخانه‌های لازم</h2>
+    <p>ترمینال (CMD) یا PowerShell رو باز کنید و دستور زیر رو کپی و اجرا کنید:</p>
+    
+    <div class="code-block">
+        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+        pip install pandas sentence-transformers scikit-learn plotly openpyxl google-generativeai openai
+    </div>
+
+    <h2><span class="step-number">3</span> دریافت API Key (انتخاب هوش مصنوعی)</h2>
+    <p>شما دو انتخاب دارید: استفاده از مدل رایگان گوگل (پیشنهادی) یا مدل پولی ChatGPT.</p>
+    
+    <div class="info-box">
+        <strong>💎 گزینه پیشنهادی (رایگان): Google Gemini</strong><br>
+        1. فیلترشکن رو روشن کنید.<br>
+        2. به سایت <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a> برید.<br>
+        3. روی دکمه <strong>Create API Key</strong> کلیک کنید و کد رو کپی کنید.
+    </div>
+
+    <div class="info-box" style="background: #fff7ed; border-color: #f97316; color: #9a3412;">
+        <strong>⚡ گزینه حرفه‌ای (پولی): OpenAI ChatGPT</strong><br>
+        اگر اکانت شارژ شده OpenAI دارید، می‌توانید از مدل‌های GPT-4 استفاده کنید. کافیست کلید API خود را از پنل OpenAI کپی کنید. (دقت کنید که این گزینه نیاز به اعتبار دلاری دارد).
+    </div>
+
+    <h2><span class="step-number">4</span> تنظیم و اجرا</h2>
+    <ol>
+        <li>فایل پایتونی که براتون فرستادم (<code>cluster_seo.py</code>) رو باز کنید (با Notepad یا VS Code).</li>
+        <li>در خطوط اول کد، کلید API خودتون رو در بخش مربوطه (<code>GOOGLE_API_KEY</code> یا <code>OPENAI_API_KEY</code>) جایگذاری کنید.</li>
+        <li>فایل رو ذخیره کنید و روی Run دابل کلیک کنید تا اجرا بشه.</li>
+    </ol>
+
+    <h2><span class="step-number">5</span> نحوه استفاده</h2>
+    <p>بعد از اولین اجرا، برنامه یک فایل اکسل به نام <code>keywords_input.xlsx</code> می‌سازه.</p>
+    <ol>
+        <li>فایل اکسل رو باز کنید و کلمات کلیدی خودتون رو در ستون <strong>Keyword</strong> کپی کنید.</li>
+        <li>(اختیاری) حجم جستجو رو در ستون <strong>Search Volume</strong> وارد کنید.</li>
+        <li>فایل اکسل رو ببندید و دوباره برنامه رو اجرا کنید.</li>
+    </ol>
+
+    <h2>📊 تحلیل خروجی‌ها (فایل HTML به چه دردی میخوره؟)</h2>
+    <p>برنامه دو فایل به شما تحویل می‌دهد:</p>
+    
+    <h3>۱. فایل اکسل (keywords_final_strategy.xlsx)</h3>
+    <p>این فایل برنامه عملیاتی شماست. ستون‌های مهم:</p>
+    <ul>
+        <li><strong>Pillar Topic:</strong> نام پیشنهادی برای صفحه جامع (مادر).</li>
+        <li><strong>Search Intent:</strong> تشخیص میده کاربر دنبال خرید (Transactional) هست یا آموزش (Informational).</li>
+    </ul>
+
+    <h3>۲. فایل نقشه تعاملی (interactive_topic_map.html) 🌟</h3>
+    <p>این فایل، <strong>نقشه گنج</strong> پروژه شماست! روی فایل کلیک کنید تا در مرورگر باز شود:</p>
+    <ul>
+        <li><strong>دید عقاب (Bird's Eye View):</strong> تمام موضوعات سایت رو یکجا می‌بینید و می‌فهمید کدوم موضوعات به هم نزدیک‌ترن.</li>
+        <li><strong>تشخیص پتانسیل:</strong> دایره‌های بزرگتر یعنی اون کلمات سرچ و پول بیشتری توشون هست.</li>
+        <li><strong>پرزنت حرفه‌ای:</strong> به جای نشون دادن اکسل‌های خسته کننده به کارفرما، این نمودار رنگی و تعاملی رو نشون بدید تا عاشق استراتژی شما بشن.</li>
+        <li><strong>تعامل:</strong> موس رو روی دایره‌ها ببرید تا جزئیات هر کلمه رو ببینید.</li>
+    </ul>
+
+    <div class="footer">
+        <p>طراحی و توسعه با ❤️ توسط <strong>امیر دهقانی</strong></p>
+        
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/amirghf/" target="_blank" class="social-btn">
+                🔗 ارتباط در لینکدین
+            </a>
+            <a href="https://instagram.com/alef.ba.dal" target="_blank" class="social-btn">
+                📸 اینستاگرام: @alefbadal
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function copyCode(btn) {
+        const code = btn.parentElement.innerText.replace('Copy', '').trim();
+        navigator.clipboard.writeText(code);
+        btn.innerText = 'Copied!';
+        setTimeout(() => {
+            btn.innerText = 'Copy';
+        }, 2000);
+    }
+</script>
+
+</body>
+</html>
