@@ -17,7 +17,7 @@ warnings.filterwarnings("ignore")
 # ⚙️ API KEYS CONFIGURATION
 # ==========================================
 # 🔴 کلید خود را اینجا بگذارید
-GOOGLE_API_KEY = "AIzaSyBbfnf3knPoAxf6wKcdKEjaIG4ZAf7PCkc" 
+GOOGLE_API_KEY = "AIzxxxxxxxxxxxxxxx" 
 OPENAI_API_KEY = "xxxxxxxxxxxxxxxxxx" 
 
 # File Names
@@ -219,5 +219,6 @@ fig = px.scatter(
 )
 fig.write_html(OUTPUT_HTML)
 print(f"🎉  Map Saved: {OUTPUT_HTML}")
+
 
 input("\nPress Enter to exit...")
